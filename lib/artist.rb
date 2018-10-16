@@ -5,19 +5,19 @@ class Artist
   include Memorable::InstanceMethods
   attr_accessor :name
 
-  @@all = []
+  @@artist = []
 
   def initialize
     @songs = []
-    @@all << self
+    @@artist << self
   end
 
   def self.all
-    @@all
+    @@artist
   end
 
   def self.find_by_name(name)
-    @@all.detect {|a| a.name == name}
+    @@artist.detect {|a| a.name == name}
   end
 
   def add_song(song)
