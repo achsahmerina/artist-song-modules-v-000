@@ -27,6 +27,6 @@ class Artist
   end
 
   def add_songs(songs)
-    songs.each { |song| add_song(song) }
+    artist.each { |song| add_song(song) }
   end
 end
