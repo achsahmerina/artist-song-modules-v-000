@@ -2,7 +2,7 @@ class Artist
   extend Memorable::ClassMethods
   include Memorable::InstanceMethods
   extend Findable
-  include Paramabl
+  include Paramable
   @@artists = []
 
   attr_accessor :name
