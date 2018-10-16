@@ -3,21 +3,20 @@ class Artist
   extend Findable
   include Paramable
   include Memorable::InstanceMethods
-  att
-  r_accessor :name
-  @@artists = []
-
   attr_accessor :name
+
+  @@all = []
 
   def initialize(name)
     @name = name
+    @@all << self
   end
 
   def self.all
-    @@artists
+    @@all
   end
 
   def self.find_by_name(name)
-    @@artists.detect {|a| a.name == name}
+    @@all.detect {|a| a.name == name}
   end
 end
