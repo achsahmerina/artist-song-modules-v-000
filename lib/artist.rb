@@ -3,7 +3,7 @@ class Artist
   extend Findable
   include Paramable
   include Memorable::InstanceMethods
-  attr_accessor :name
+  attr_accessor :name, :artist
   attr_reader :songs
 
   @@all = []
